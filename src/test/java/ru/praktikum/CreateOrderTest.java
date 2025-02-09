@@ -9,9 +9,6 @@ import ru.praktikum.data.User;
 import ru.praktikum.data.UserGenerator;
 import ru.praktikum.order.CreateOrder;
 import ru.praktikum.user.UserAction;
-import ru.praktikum.user.UserCreate;
-
-import java.util.ArrayList;
 
 import static org.apache.http.HttpStatus.*;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -21,18 +18,14 @@ import static ru.praktikum.data.Const.*;
 public class CreateOrderTest {
     private User user;
     private UserAction userAction;
-    private UserCreate createUser;
     private Response response;
     private CreateOrder createOrder;
-    private ArrayList<String> ingredients;
 
     @Before
     public void setUp() {
         user = UserGenerator.getUser();
         userAction = new UserAction();
-        createUser = new UserCreate();
         createOrder = new CreateOrder();
-        ingredients = new ArrayList<>();
     }
 
     @Test
